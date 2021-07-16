@@ -1,5 +1,5 @@
 
-FROM php:7.3-fpm
+FROM php:8.0-fpm
 
 # Copy composer.lock and composer.json
 COPY composer.lock composer.json /var/www/
@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     locales \
     zip \
+    libonig-dev \
     jpegoptim optipng pngquant gifsicle \
     vim \
     unzip \
